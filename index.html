@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração pra minha gatinha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Chewy', cursive;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: black;
+            color: white;
+        }
+
+        #textDisplay {
+            font-size: 1.8em;
+            white-space: pre-line;
+            max-width: 90%;
+            margin: auto;
+            text-align: left;
+            line-height: 1.8;
+            overflow-y: auto;
+            max-height: 90vh;
+            padding: 10px;
+        }
+
+        #countdown {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            cursor: pointer;
+            background-color: #ff0080;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #spiderContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+        }
+
+        .spider {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            border-radius: 50%;
+            background-image: url('https://example.com/spider.png'); /* Aqui você coloca o link da imagem da aranha */
+            background-size: cover;
+            animation: moveSpider 5s infinite linear;
+        }
+
+        @keyframes moveSpider {
+            0% { top: 0; left: 0; }
+            25% { top: 20%; left: 40%; }
+            50% { top: 50%; left: 60%; }
+            75% { top: 70%; left: 80%; }
+            100% { top: 100%; left: 0; }
+        }
+
+        @keyframes colorFlash {
+            0% { background-color: #ff0080; }
+            25% { background-color: #ff69b4; }
+            50% { background-color: #8000ff; }
+            75% { background-color: #00ffff; }
+            100% { background-color: #ff0080; }
+        }
+
+    </style>
+</head>
+<body>
+    <button id="startButton" onclick="startCountdown()">Apertei aqui</button>
+    <div id="countdown" style="display: none;">Susto em</div>
+    <div id="spiderContainer">
+        <!-- Aranhas se movendo -->
+        <div class="spider" style="top: 10%; left: 10%"></div>
+        <div class="spider" style="top: 30%; left: 30%"></div>
+        <div class="spider" style="top: 50%; left: 50%"></div>
+        <div class="spider" style="top: 70%; left: 70%"></div>
+    </div>
+    <div id="textDisplay"></div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.dropbox.com/scl/fi/syqyr3hm1ex6lgza11j9d/Eu-Amo-Voc-Tim-Maia-_720p_-h264_-_online-video-cutter.com_.mp3?rlkey=nb2lgdtppv276dli27xl7ljak&st=5hhlsiko&dl=1" type="audio/mp3">
+    </audio>
+
+    <script>
+        const message = `Tauane meu amor por você é como amar praticamente a minha mãe kkkk, você é muito especial pra mim meu amor, eu preciso de você pra sempre na minha vida, pra sempre mesmo, toda vez que eu penso em você me abre um sorriso que não tem explicação, eu simplesmente amo você, cada pedacinho teu, cada detalhe em ti meu amor, sem exeção kkkkkkkk. Você pode se fazer a pergunta, "por que você me ama?" Então... Eu te amo porque sempre que eu penso em você meeu dia melhora, eu te amo porque sempre quando você quer ficar sozinha eu ainda quero estar perto de você, eu te amo porque mesmo eu sem assunto eu não deixo de falar com vc, eu te amo porque você concertou coisas na minha cabeça que nem foi você quem causou, eu te amo porque mesmo eu estando mal, eu ainda gosto de conversar contigo, eu te amo porque sim, meu amor por você é literalmente inexplicável, da nem pra acreditar que eu todo bobão conquistei alguém como você, tudo o que eu faço pra você ainda não foi nada, eu quero te proporcionar coisas, experiencias únicas para que você se sinta única, amada como você realmente deve ser, Tauane eu preciso muuuito mas muito de você na minha vida, e eu espero que você não desista da gente assim como eu faço todos os dias, sempre fazendo você ser minha prioridade, porque você é, eu amo você desde o dia em que a gente se conheceu, porque em 3 horas de conversa a gente já tava se chamando de amor kkkkkk, foi rápido? claro que foi, mas também não foi falso aquilo, porque eu realmente te amei, e eu quero te amar hoje, amanhã e para todo sempre. Você é o motivo da minha felicidade, dos meus sorrisos do nada que eu tenho, os motivos das minhas orações que eu faço por nós pedindo a Deus para cuidar de você e não permitir que o inimigo mude seus pensamentos, você é o motivo de eu pegar meu celular e olhar meu whatsapp quando chega notificação sua, motivo do amor mais sincero que eu já senti por alguém, motivo dos meus choros quando eu penso em perder você, nunca jamais eu olhei pra alguém como eu olho pra você, mesmo como eu nunca te vi pessoalmente, é como se fosse, eu fico te olhando, te admirando, admirando a mulher que você é e se tornou, e vendo que a cada segundo, a cada minuto, a cada hora, a cada dia eu me apaixono mais por ti, espero que o nosso amor dure pra sempre, e que qualquer obstáculo possa ser superado facilmente, vai ter muitos obstáculos mas a gente vai conseguir superar todos, o nosso amor é maior e mais forte do que tudo e nós sabemos disso, e por último eu queria agradecer por tudo, todos os momentos incriveis, todos os momentos que a gente passamos juntos e vamos passar, você me faz muito feliz meu amor, me desculpa por tudo tá? logo logo a gente vai estar juntinhos um do lado do outro, tudo isso que a gente tá passando vai valer muito a pena lá na frente, e você sabe disso. Você tudo pra mim meu amor, te amo pra sempreee viu ❤️`; // Texto
+
+        function startCountdown() {
+            document.getElementById('startButton').style.display = 'none'; // Esconde o botão
+            const countdown = document.getElementById('countdown');
+            countdown.style.display = 'block';
+
+            document.body.style.backgroundColor = 'black'; // Fica tudo preto
+            document.getElementById('spiderContainer').style.visibility = 'visible'; // Aranhas aparecem
+
+            let countdownValue = 3;
+            let countdownInterval = setInterval(function() {
+                countdown.innerHTML = `Susto em: ${countdownValue}`;
+                countdownValue--;
+
+                if (countdownValue < 0) {
+                    clearInterval(countdownInterval);
+                    countdown.style.display = 'none';
+                    document.getElementById('spiderContainer').style.visibility = 'hidden'; // Aranhas desaparecem
+                    startTyping();
+                }
+            }, 1000);
+        }
+
+        function startTyping() {
+            const textDisplay = document.getElementById('textDisplay');
+            const backgroundMusic = document.getElementById('backgroundMusic');
+
+            let charIndex = 0;
+
+            document.body.style.animation = "colorFlash 5000ms infinite"; // Fundo colorido começa após a contagem
+
+            function typeCharacter() {
+                if (charIndex < message.length) {
+                    textDisplay.innerHTML += message[charIndex];
+                    charIndex++;
+                    setTimeout(typeCharacter, 50); // Velocidade de digitação
+                }
+            }
+
+            backgroundMusic.play();
+            textDisplay.scrollIntoView({ behavior: 'smooth' }); // Rolagem suave
+            typeCharacter();
+        }
+    </script>
+</body>
+</html>
